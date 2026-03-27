@@ -3,15 +3,15 @@ public class FirstDegreeEquation {
     public static void main(String[] args) {
         String strA, strB;
         strA = JOptionPane.showInputDialog(null,
-                "Please input the coefficient a:", "Input the coefficient a", JOptionPane.INFORMATION_MESSAGE);
+                "Enter the coefficient a:", "Enter the coefficient a", JOptionPane.INFORMATION_MESSAGE);
         strB = JOptionPane.showInputDialog(null,
-                "Please input the coefficient b:", "Input the coefficient b", JOptionPane.INFORMATION_MESSAGE);
+                "Enter the coefficient b:", "Enter the coefficient b", JOptionPane.INFORMATION_MESSAGE);
         double a = Double.parseDouble(strA);
         double b = Double.parseDouble(strB);
         String strNotification;
         if (a == 0) {
             if (b == 0) {
-                strNotification = "The equation has infinitely many solutions.";
+                strNotification = "The equation has infinite solutions.";
             } else {
                 strNotification = "The equation has no solution.";
             }

@@ -1,0 +1,24 @@
+1. Trong code hiện tại, có 3 lựa chọn đưa ra 3 kết quả:
+    Chọn "Yes": Trả về 0 (JOptionPane.YES_OPTION).
+    Chọn "No": Trả về 1 (JOptionPane.NO_OPTION).
+    Chọn "Cancel": Trả về 2 (JOptionPane.CANCEL_OPTION).
+
+Vấn đề trong code hiện tại: Câu lệnh (option == JOptionPane.YES_OPTION ? "Yes" : "No") coi mọi thứ không phải Yes đều là No. Vì vậy, nếu người dùng nhấn "Cancel", thông báo vẫn sẽ hiện là "You've chosen: No".
+
+2. Để thay đổi các nút bấm có thể dùng hàm showOptionDialog.
+    Chỉ hiện YES và NO, không hiện CANCEL:
+        int option = JOptionPane.showConfirmDialog(null, 
+            "Do you want to change to the first class ticket?", 
+            "Confirmation", 
+            JOptionPane.YES_NO_OPTION);
+
+    Đổi tên nút thành "I do" và "I dont":
+        String[] options = {"I do", "I don't"};
+
+        int option = JOptionPane.showOptionDialog(null,
+            "Do you want to change to the first class ticket?",
+            "Ticket Option",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE,
+            null,   
+            options,);

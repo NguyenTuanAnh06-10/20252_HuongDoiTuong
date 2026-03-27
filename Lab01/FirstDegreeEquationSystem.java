@@ -35,11 +35,9 @@ public class FirstDegreeEquationSystem {
         } else {
             double x1 = D1 / D;
             double x2 = D2 / D;
-            strNotification = """
-                    The solution is: 
-                    x1 = %s
-                    x2 = %s
-                    """.formatted(String.format("%.2f", x1), String.format("%.2f", x2));
+            strNotification = "The solution is: \n"
+                    + "x1 = " + String.format("%.2f", x1) + "\n"
+                    + "x2 = " + String.format("%.2f", x2);
         }
         JOptionPane.showMessageDialog(null, strNotification, "Solution", JOptionPane.INFORMATION_MESSAGE);
     }
